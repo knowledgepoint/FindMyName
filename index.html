@@ -40,7 +40,7 @@
                 letter-spacing: 6px;
                 margin-bottom: 1px;
                 background:midnightblue;
-                background-position: relative;
+                background-size: 100%;
                 position: relative;
                 animation: text 12s 1;
 
@@ -482,23 +482,23 @@
     <body>
                     
         <div id="bg" class="wrapper">
+                <div  id="bannerdiv" class="form-group row flex-v-center">
                 
+                        <h3><b><u>Eager To Know My Name ? Guess It ...!!!</u></b></h3>
+                    
+                </div>
             <div class="form-group row flex-v-center">
                 <div class="col-xs-9 col-sm-9">
                     <canvas id="canvas" width="0" height="0"></canvas><br>
-                    <div id="nameBanner" class="container" style="visibility: hidden;">
+                    <div id="nameBanner" style="visibility: hidden;">
                             <span class="mytext1">NIKILAN</span>
                             
                     </div>     
                 </div>
             </div>
             
-            <div  id="bannerdiv">
-                
-                    <h1><b><u>Eager To Know My Name ? Guess It ...!!!</u></b></h1>
-                
-            </div>
-           
+            
+        
             <div id="maindiv" class="form-group row flex-v-center">    
             <div class="col-xs-3 col-sm-2">
                    <input id="1" type="text" class="form-control" name="1" placeholder="Enter Baby's Name">
@@ -520,9 +520,9 @@
                     <input type="hidden" id="giveClue">
                 </div>
             </div>
-           
-            
         </div>
+            
+        
         
         
     </body>
