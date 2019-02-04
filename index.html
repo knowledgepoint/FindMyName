@@ -99,36 +99,9 @@
                 color: black;
                 background-color:floralwhite;
                 font-family: verdana;
+                font-weight: bold;
             }
-            input[type=button], select {
-                background-color:orange;
-                color: black;
-                font-family: verdana;
-            }
-            .button {
-                background-color: #4CAF50; /* Green */
-                border: none;
-                color: white;
-                padding: 8px 22px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 12px;
-                margin: 4px 2px;
-                -webkit-transition-duration: 0.4s; /* Safari */
-                transition-duration: 0.4s;
-                cursor: pointer;
-                font-style:normal; 
-            }
-            .button2 {
-                background-color: white; 
-                color: black; 
-                border: 2px solid #008CBA;
-            }
-            .button2:hover {
-                background-color: #008CBA;
-                color: white;
-            }
+            
             label{
                 color: black;
                 font-family: verdana;
@@ -439,18 +412,27 @@
             <div class="container-fluid">
                 <div id="maindiv" class="form-group row flex-v-center">    
                     <div class="row">
-                        <div class="col-xs-9 col-sm-9">
+                        <div class="col-xs-6 col-sm-6">
+                            </p>
                             <input id="1" type="text" class="form-control" name="1" placeholder="Enter Baby's Name">
-                            <button id="found" class="btn btn-success"  onclick="validate()"> got it..!!!</button>
+                        </div>
+                        <div class="col-xs-1 col-sm-1">
+                            <button id="found" class="btn btn-success"  onclick="validate()"> GOT IT ...!!!</button>
                         </div>
                     </div>
                     <div id="cluediv" class="form-group row flex-v-center">
-                        <div class="col-xs-1 col-sm-4">
-                            <input type="text" id="clue1" name="clue1" class="form-control" placeholder="clue1"><br>
-                            <input type="text" id="clue2" name="clue2" class="form-control" placeholder="clue2"><br>
-                            <input type="text" id="clue3" name="clue3" class="form-control" placeholder="clue3"><br>
-                            <input type="text" id="clue4" name="clue4" class="form-control" placeholder="clue4"><br>
-                            <input type="text" id="clue5" name="clue5" class="form-control" placeholder="clue5"><br>
+                        <div class="col-xs-9 col-sm-9">
+                            </p>
+                            <input type="text" id="clue1" name="clue1" class="form-control" placeholder="clue1">
+                            </p>
+                            <input type="text" id="clue2" name="clue2" class="form-control" placeholder="clue2">
+                            </p>
+                            <input type="text" id="clue3" name="clue3" class="form-control" placeholder="clue3">
+                            </p>
+                            <input type="text" id="clue4" name="clue4" class="form-control" placeholder="clue4">
+                            </p>
+                            <input type="text" id="clue5" name="clue5" class="form-control" placeholder="clue5">
+                            </p>
                             <input type="text" id="clue6" name="clue6" class="form-control" placeholder="clue6">
                             <input type="hidden" id="giveClue">
                         </div>
