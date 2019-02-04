@@ -135,43 +135,38 @@
                 if(document.getElementById("giveClue").value == "1"){
                     
                     setTimeout(function(){
-                        showClue1();
+                        showClue2();
                     },30000);
                     setTimeout(function(){
-                        showClue2();
+                        showClue3();
                     },50000);
                     setTimeout(function(){
-                        showClue3();
+                        showClue4();
                     },70000);
                     setTimeout(function(){
-                        showClue4();
+                        showClue5();
                     },90000);
                     setTimeout(function(){
-                        showClue5();
-                    },110000);
-                    setTimeout(function(){
                         showClue6();
-                    },130000);
+                    },110000);
                 }
                 
             }
-            function showClue1(){
-                document.getElementById("clue1").value="it's a 7 letter word";
-            }
+            
             function showClue2(){
-                document.getElementById("clue2").value = "Clue2";
+                document.getElementById("clue2").value = "Another name of lord murugan";
             }
             function showClue3(){
-                document.getElementById("clue3").value = "Clue3";
+                document.getElementById("clue3").value = "Name ends with letter N";
             }
             function showClue4(){
-                document.getElementById("clue4").value = "Clue4";
+                document.getElementById("clue4").value = "(3,4,5 & 7) oven for burning & baking";
             }
             function showClue5(){
-                document.getElementById("clue5").value = "Name ends with letter N";
+                document.getElementById("clue5").value = "(3,4 & 7) a family";
             }
             function showClue6(){
-                document.getElementById("clue6").value = "another name of lord murugan";
+                document.getElementById("clue6").value = "(1,2 & 5) non-existent or nothing";
             }
             function startAnimation(){
             var canvas = document.getElementById("canvas"),
@@ -408,8 +403,8 @@
             </div>
             
             <div class="container-fluid">
-                <div id="maindiv" class="form-group row flex-v-center">    
-                    <div id="bannerdiv" class="row" style="visibility: hidden;">
+                <div id="maindiv" class="form-group">    
+                    <div id="bannerdiv" class="row">
                         <h1><b>Guess My Name ...!!!</b></h1>
                     </div>
                     <div class="row">
@@ -421,10 +416,10 @@
                             <button id="found" class="btn btn-success"  onclick="validate()"> GOT IT ...!!!</button>
                         </div>
                     </div>
-                    <div id="cluediv" class="form-group row flex-v-center">
+                    <div id="cluediv" class="form-group">
                         <div class="col-xs-9 col-sm-9">
                             </p>
-                            <input type="text" id="clue1" name="clue1" class="form-control" placeholder="clue1">
+                            <input type="text" id="clue1" name="clue1" class="form-control" placeholder="clue1: It's a 7 letter word">
                             </p>
                             <input type="text" id="clue2" name="clue2" class="form-control" placeholder="clue2">
                             </p>
