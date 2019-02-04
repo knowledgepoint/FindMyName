@@ -110,6 +110,11 @@
             .wrapper {
                     text-align: center;
                 }
+            .clues{
+                font-size: large;
+                font-weight: bold;
+                color: orange; 
+            }    
         </style>
         <script>
             
@@ -154,19 +159,24 @@
             }
             
             function showClue2(){
-                document.getElementById("clue2").value = "Another name of lord murugan";
+                var divControl=  document.getElementById("clue2");
+                divControl.style.visibility="visible";
             }
             function showClue3(){
-                document.getElementById("clue3").value = "Name ends with letter N";
+                var divControl=  document.getElementById("clue3");
+                divControl.style.visibility="visible";
             }
             function showClue4(){
-                document.getElementById("clue4").value = "(3,4,5 & 7) oven for burning & baking";
+                var divControl=  document.getElementById("clue4");
+                divControl.style.visibility="visible";
             }
             function showClue5(){
-                document.getElementById("clue5").value = "(3,4 & 7) a family";
+                var divControl=  document.getElementById("clue5");
+                divControl.style.visibility="visible";
             }
             function showClue6(){
-                document.getElementById("clue6").value = "(1,2 & 5) non-existent or nothing";
+                var divControl=  document.getElementById("clue6");
+                divControl.style.visibility="visible";
             }
             function startAnimation(){
             var canvas = document.getElementById("canvas"),
@@ -411,27 +421,45 @@
                         <div class="col-xs-6 col-sm-6">
                             </p>
                             <input id="1" type="text" class="form-control" name="1" placeholder="Enter Baby's Name">
+                            <input type="hidden" id="giveClue">
                         </div>
                         <div class="col-xs-1 col-sm-1">
                             <button id="found" class="btn btn-success"  onclick="validate()"> GOT IT ...!!!</button>
                         </div>
                     </div>
-                    <div id="cluediv" class="form-group">
-                        <div class="col-xs-9 col-sm-9">
+                    <div id="clue1" class="clues">
+                        <p>Clue 1: It's a 7 letter word.</p>
+                    </div>
+                    <div id="clue2" class="clues" style="visibility: hidden;">
+                            <p>Clue 2: Another name of lord murugan</p>
+                    </div>
+                    <div id="clue3" class="clues" style="visibility: hidden;">
+                            <p> Clue 3: Name ends with letter N</p>
+                    </div>
+                    <div id="clue4" class="clues" style="visibility: hidden;">
+                            <p>Clue 4 : (3,4,5 and 7) oven for burning and baking</p>
+                    </div>
+                    <div id="clue5" class="clues" style="visibility: hidden;">
+                            <p>Clue 5: (3,4 and 7) a family</p>
+                    </div>
+                    <div id="clue6" class="clues" style="visibility: hidden;">
+                            <p>Clue 6: (1,2 and 5) non-existent or nothing</p>
+                    </div>
+                        <!--<div class="col-xs-9 col-md-9">
                             </p>
-                            <input type="text" id="clue1" name="clue1" class="form-control" placeholder="clue1: It's a 7 letter word">
+                            <input type="text" id="clue1" name="clue1" class="input-group-lg" placeholder="Clue1: It's a 7 letter word">
                             </p>
-                            <input type="text" id="clue2" name="clue2" class="form-control" placeholder="clue2">
+                            <input type="text" id="clue2" name="clue2" class="form-control" placeholder="Clue2">
                             </p>
-                            <input type="text" id="clue3" name="clue3" class="form-control" placeholder="clue3">
+                            <input type="text" id="clue3" name="clue3" class="form-control" placeholder="Clue3">
                             </p>
-                            <input type="text" id="clue4" name="clue4" class="form-control" placeholder="clue4">
+                            <input type="text" id="clue4" name="clue4" class="form-control" placeholder="Clue4">
                             </p>
-                            <input type="text" id="clue5" name="clue5" class="form-control" placeholder="clue5">
+                            <input type="text" id="clue5" name="clue5" class="form-control" placeholder="Clue5">
                             </p>
-                            <input type="text" id="clue6" name="clue6" class="form-control" placeholder="clue6">
-                            <input type="hidden" id="giveClue">
-                        </div>
+                            <input type="text" id="clue6" name="clue6" class="form-control" placeholder="Clue6">
+                            
+                        </div>-->
                     </div>
                 </div>
             </div>
