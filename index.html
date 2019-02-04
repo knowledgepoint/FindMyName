@@ -14,7 +14,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
         <style>
-
             *{
                 padding: 0;
                 margin: 0;
@@ -23,7 +22,7 @@
                
                 .container{
                 text-align: center;
-                position: relative;
+                position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
@@ -34,16 +33,14 @@
                 display: block;
                 }
                 .mytext1{
-                color: #E91E63;
+                color: white;
                 font-size: 60px;
                 font-weight: 700;
-                letter-spacing: 6px;
-                margin-bottom: 250px;
-                background:transparent;
-                background-size: 100%;
+                letter-spacing: 8px;
+                margin-bottom: 20px;
+                background: #002f5f;
                 position: relative;
-                animation: text 12s 1;
-
+                animation: text 3s 1;
                 }
                 .mytext2{
                 font-size: 30px;
@@ -55,26 +52,21 @@
                 0%{
                     color: black;
                     margin-bottom: -40px;
-
                 }
                 30%{
                     letter-spacing: 25px;
                     margin-bottom: -40px;
-
                 }
                 85%{
                     letter-spacing: 8px;
                     margin-bottom: -40px;
-
                 }
                 }
-
             body, html {
                 height: 100%;
                 font-family: 'Bungee Inline', sans-serif;
                 background-image: url("https://github.com/knowledgepoint/FindMyName/blob/master/image/BabyPicture.jpg");
             }
-
             #bg { 
                 /* The image used */
                 /*background-image: url("https://4.bp.blogspot.com/-tLHtG6i7zTk/TprejQCoXEI/AAAAAAAAAIc/Ld79RYa8OYs/s1600/IMG_8651.JPG");*/
@@ -86,10 +78,8 @@
                 background-size: cover;
                 position: relative;
                 
-
                 /* Full height */
                 height: 100%;
-
                 /* Center and scale the image nicely */
                /* background-position: center;
                 background-repeat: no-repeat;
@@ -97,18 +87,15 @@
                 background-size:cover;
                 background-position: center;
             }
-
             h1 {
                 color:black;
                 font-family: verdana;
                 font-size: 300%;
             }
-
             canvas {
                 background-color: transparent;
                 
             }
-
             input[type=text], select {
                 display: inline-block;
                 border: 1px flat #ccc;
@@ -117,13 +104,11 @@
                 background-color:floralwhite;
                 font-family: verdana;
             }
-
             input[type=button], select {
                 background-color:orange;
                 color: black;
                 font-family: verdana;
             }
-
             .button {
                 background-color: #4CAF50; /* Green */
                 border: none;
@@ -139,31 +124,25 @@
                 cursor: pointer;
                 font-style:normal; 
             }
-
             .button2 {
                 background-color: white; 
                 color: black; 
                 border: 2px solid #008CBA;
             }
-
             .button2:hover {
                 background-color: #008CBA;
                 color: white;
             }
-
             label{
                 color: black;
                 font-family: verdana;
                 font-size: medium;
             }
-
             .wrapper {
                     text-align: center;
                 }
-
         </style>
         <script>
-
             
             function validate(){
                 var realName = document.getElementById("1").value;
@@ -189,79 +168,61 @@
                     setTimeout(function(){
                         showClue1();
                     },30000);
-
                     setTimeout(function(){
                         showClue2();
                     },50000);
-
                     setTimeout(function(){
                         showClue3();
                     },70000);
-
                     setTimeout(function(){
                         showClue4();
                     },90000);
-
                     setTimeout(function(){
                         showClue5();
                     },110000);
-
                     setTimeout(function(){
                         showClue6();
                     },130000);
                 }
                 
             }
-
             function showClue1(){
                 document.getElementById("clue1").value="it's a 7 letter word";
             }
-
             function showClue2(){
                 document.getElementById("clue2").value = "Clue2";
             }
-
             function showClue3(){
                 document.getElementById("clue3").value = "Clue3";
             }
-
             function showClue4(){
                 document.getElementById("clue4").value = "Clue4";
             }
-
             function showClue5(){
                 document.getElementById("clue5").value = "Name ends with letter N";
             }
-
             function showClue6(){
                 document.getElementById("clue6").value = "another name of lord murugan";
             }
-
             function startAnimation(){
-
             var canvas = document.getElementById("canvas"),
             stage = new createjs.StageGL(canvas, {transparent:true, antialias:true});
             createjs.Ticker.on("tick", tick);
             createjs.Ticker.timingMode = createjs.Ticker.RAF;
             var w = 100, h = 100;
-
             var params = {},
                 search = window.location.search.substr(1).split("&");
             for (var i=0, l=search.length; i<l; i++){
             var parts = search[i].split("=");
             params[parts[0]] = parts[1];
             }
-
             // Init Code
             handleResize();
-
             var ss, totalColors = 16;
-
             createSprites();
             function createSprites() {
             var sb = new createjs.SpriteSheetBuilder(),
                 rect = new createjs.Rectangle(-5,-5,10,10);
-
             // 16 colors, 16 lightness
             var variations = 20;
             for (var i=0; i<totalColors; i++) {
@@ -283,12 +244,9 @@
             
             ss = sb.build();
             }
-
-
             var fws = [], ps = [],
             c = new createjs.Container();
             stage.addChild(c);
-
             function createFW() {
             var s = new createjs.Sprite(ss, "projectile")
                 .set({
@@ -320,9 +278,6 @@
                 firework(fw, hue);
             }
             }
-
-
-
             function firework(fw, hue) {
             var size = Math.random() * 5 + 10;
             for (var i=0, l=size*20; i<l; i++) {
@@ -346,7 +301,6 @@
                 ps.push(p);
             }
             }
-
             function textwork(fw, hue) {
             var size = Math.random() * 60 + 60;
             var t = new createjs.Text(getWord(), "bold " + size + "px Arial", "white")
@@ -384,10 +338,7 @@
             }
             t.uncache();
             }
-
             stage.on("stagemousedown", createFW);
-
-
             // Tick Code
             function tick(event) {
             
@@ -430,7 +381,6 @@
             }
             stage.update(event);
             }
-
             // Resize Code
             window.addEventListener("resize", handleResize, false);
             function handleResize(event) {
@@ -440,7 +390,6 @@
             stage.updateViewport(w,h);
             stage.update();
             }
-
             var words = ["Nikilan","nikilan","NIKILAN"];
             if (params.words) {
             words = params.words.split(",");
@@ -448,7 +397,6 @@
             function getWord() {
             return words[Math.random() * words.length|0].toUpperCase();
             }
-
             // Object Pooling.
             var hash = [];
             function getStar() {
@@ -467,13 +415,11 @@
             star.visible = star.active = false;
             hash.push(star);
             }
-
             autoFW();
             function autoFW() {
             createFW();
             setTimeout(autoFW, Math.random() * 500 + 300);
             }
-
            
         }
         
@@ -482,7 +428,6 @@
     <body>
                     
         <div id="bg" class="wrapper">
-                
             <div class="form-group row flex-v-center">
                 <div class="col-xs-9 col-sm-9">
                     <canvas id="canvas" width="0" height="0"></canvas><br>
@@ -492,25 +437,24 @@
                     </div>     
                 </div>
             </div>
-            
             <div  id="bannerdiv">
                 
-                    <h3><b><u>Eager To Know My Name ? Guess It ...!!!</u></b></h3>
+                    <h1><b><u>Eager To Know My Name ? Guess It ...!!!</u></b></h1>
                 
             </div>
-           
+            <div class="container">
             <div id="maindiv" class="form-group row flex-v-center">    
-            <div class="col-xs-3 col-sm-2">
+            <div class="col-xs-3 col-sm-3">
                    <input id="1" type="text" class="form-control" name="1" placeholder="Enter Baby's Name">
                    
-            </div>
+            
             
             <div class="col-xs-1">
                     <button id="found" class="btn btn-success"  onclick="validate()"> got it..!!!</button>
             </div>
             </div>
             <div id="cluediv" class="form-group row flex-v-center">
-                <div class="col-xs-3" col-sm-2>
+                <div class="col-xs-3 col-sm-4">
                     <input type="text" id="clue1" name="clue1" class="form-control" placeholder="clue1"><br>
                     <input type="text" id="clue2" name="clue2" class="form-control" placeholder="clue2"><br>
                     <input type="text" id="clue3" name="clue3" class="form-control" placeholder="clue3"><br>
@@ -520,10 +464,9 @@
                     <input type="hidden" id="giveClue">
                 </div>
             </div>
-           
-            
+            </div>
         </div>
-        
+        </div>
         
     </body>
 </html>
