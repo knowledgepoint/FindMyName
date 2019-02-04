@@ -39,8 +39,8 @@
                 letter-spacing: 8px;
                 margin-bottom: 20px;
                 background: #002f5f;
-                position: inherit;
-                animation: text 12s 1;
+                position: relative;
+                animation: text 12s 3;
                 }
                 .mytext2{
                 font-size: 30px;
@@ -72,11 +72,18 @@
                 /*background-image: url("https://4.bp.blogspot.com/-tLHtG6i7zTk/TprejQCoXEI/AAAAAAAAAIc/Ld79RYa8OYs/s1600/IMG_8651.JPG");*/
                 background-color: white;
                 background-image: url("./image/BabyPicture.jpg");
-                height: 100%;
+                height: 100px;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
                 position: relative;
+                
+                /* Full height */
+                height: 100%;
+                /* Center and scale the image nicely */
+               /* background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;*/
                 background-size:cover;
                 background-position: center;
             }
@@ -96,24 +103,22 @@
                 color: black;
                 background-color:floralwhite;
                 font-family: verdana;
-                margin-left: 2%;
-                margin-bottom: 5%;
             }
             input[type=button], select {
                 background-color:orange;
                 color: black;
                 font-family: verdana;
-                margin-left: 5%;
-                margin-bottom: 5%;
             }
             .button {
-                background-color: orangered; /* Green */
+                background-color: #4CAF50; /* Green */
                 border: none;
                 color: white;
+                padding: 8px 22px;
                 text-align: center;
                 text-decoration: none;
                 display: inline-block;
                 font-size: 12px;
+                margin: 4px 2px;
                 -webkit-transition-duration: 0.4s; /* Safari */
                 transition-duration: 0.4s;
                 cursor: pointer;
@@ -421,78 +426,46 @@
         </script>
     </head>
     <body>
+                    
         <div id="bg" class="wrapper">
             <div class="form-group row flex-v-center">
-                <div class="row">
-                    <div class="col-xs-1 col-sm-1">
-                        <canvas id="canvas" width="0" height="0"></canvas><br>
-                    </div>
-                </div>
-            </div>
-            <div id="namesettings" class="form-group row flex-v-center">
-                <div class="row">
-                    <div class="col-xs-6 col-md-6">
-                        <div id="nameBanner" class="container-fluid" style="visibility: hidden;">
-                                <span class="mytext1">NIKILAN</span>
-                                
-                        </div>     
-                    </div>
+                <div class="col-xs-9 col-sm-9">
+                    <canvas id="canvas" width="0" height="0"></canvas><br>
+                    <div id="nameBanner" class="container" style="visibility: hidden;">
+                            <span class="mytext1">NIKILAN</span>
+                            
+                    </div>     
                 </div>
             </div>
             <div  id="bannerdiv">
-                <h2><b><u>Guess My Name ...!!!</u></b></h2>
+                
+                    <h1><b><u>Eager To Know My Name ? Guess It ...!!!</u></b></h1>
+                
             </div>
-            <div class="container-fluid">
-                <div id="maindiv" class="form-group row flex-v-center">   
-                    <div class="row">    
-                        <div class="col-xs-6 col-sm-9">
-                            <input id="1" type="text" class="form-control" name="1" placeholder="Enter Baby's Name">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-2 col-md-4">
-                                <button id="found" class="btn btn-success"  onclick="validate()"> got it..!!!</button>
-                        </div>
-                    </div>
-                                   
-                    <div class="row"> 
-                        <div class="col-xs-6 col-sm-9">
-                            <input type="text" id="clue1" name="clue1" class="form-control" placeholder="clue1">
-                        </div>
-                    </div>
-                    <div class="row"> 
-                        <div class="col-xs-6 col-md-9">
-                            <input type="text" id="clue2" name="clue2" class="form-control" placeholder="clue2">
-                        </div>
-                    </div>
-                    <div class="row"> 
-                        <div class="col-xs-6 col-md-9">
-                            <input type="text" id="clue3" name="clue3" class="form-control" placeholder="clue3">
-                        </div>
-                    </div>   
-                    <div class="row"> 
-                        <div class="col-xs-6 col-md-9">
-                            <input type="text" id="clue4" name="clue4" class="form-control" placeholder="clue4">
-                        </div>
-                    </div>   
-                    <div class="row"> 
-                        <div class="col-xs-6 col-md-9">
-                            <input type="text" id="clue5" name="clue5" class="form-control" placeholder="clue5">
-                        </div>
-                    </div>   
-                    <div class="row"> 
-                        <div class="col-xs-6 col-sm-9">
-                            <input type="text" id="clue6" name="clue6" class="form-control" placeholder="clue6">
-                        </div>
-                    </div>   
-                    <div class="row"> 
-                        <div class="col-xs-6 col-md-9">        
-                            <input type="hidden" id="giveClue">
-                        </div>
-                    </div>
-                    
+            <div class="container">
+            <div id="maindiv" class="form-group row flex-v-center">    
+            <div class="col-xs-1 col-sm-3">
+                   <input id="1" type="text" class="form-control" name="1" placeholder="Enter Baby's Name">
+                   
+            
+            
+            <div class="col-xs-1">
+                    <button id="found" class="btn btn-success"  onclick="validate()"> got it..!!!</button>
+            </div>
+            </div>
+            <div id="cluediv" class="form-group row flex-v-center">
+                <div class="col-xs-1 col-sm-4">
+                    <input type="text" id="clue1" name="clue1" class="form-control" placeholder="clue1"><br>
+                    <input type="text" id="clue2" name="clue2" class="form-control" placeholder="clue2"><br>
+                    <input type="text" id="clue3" name="clue3" class="form-control" placeholder="clue3"><br>
+                    <input type="text" id="clue4" name="clue4" class="form-control" placeholder="clue4"><br>
+                    <input type="text" id="clue5" name="clue5" class="form-control" placeholder="clue5"><br>
+                    <input type="text" id="clue6" name="clue6" class="form-control" placeholder="clue6">
+                    <input type="hidden" id="giveClue">
                 </div>
             </div>
+            </div>
+        </div>
         </div>
         
     </body>
